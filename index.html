@@ -1,0 +1,380 @@
+<!doctype html>
+<html ⚡ lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="description" content="Home page of Zombusters video game">
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+    <link rel="preload" href="hero-img.jpg" as="image">
+    <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/" crossorigin>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style amp-custom>
+/* -----------------------
+Base styles
+------------------------*/
+
+body
+{
+	margin: 0;
+	padding: 0;
+	color: #333;
+	background-color: #eee;
+	font: 1em/1.2 "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	margin: 0 0 .5em;
+	font-weight: 500;
+	line-height: 1.1;
+}
+
+h1 { font-size: 2.25em; } /* 36px */
+h2 { font-size: 1.75em; } /* 28px */
+h3 { font-size: 1.375em; } /* 22px */
+h4 { font-size: 1.125em; } /* 18px */
+h5 { font-size: 1em; } /* 16px */
+h6 { font-size: .875em; } /* 14px */
+
+p
+{
+	margin: 0 0 1.5em;
+	line-height: 1.5;
+}
+
+blockquote
+{
+	padding: 1em 2em;
+	margin: 0 0 2em;
+	border-left: 5px solid #eee;
+}
+
+hr
+{
+	height: 0;
+	margin-top: 1em;
+	margin-bottom: 2em;
+	border: 0;
+	border-top: 1px solid #ddd;
+}
+
+table
+{
+	background-color: transparent;
+	border-spacing: 0;
+	border-collapse: collapse;
+	border-top: 1px solid #ddd;
+}
+
+th, td
+{
+	padding: .5em 1em;
+	vertical-align: top;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+a:link { color: royalblue; }
+a:visited { color: purple; }
+a:focus { color: black; }
+a:hover { color: green; }
+a:active { color: red; }
+
+/* -----------------------
+Layout styles
+------------------------*/
+
+.container
+{
+	max-width: 50em;
+	margin: 0 auto;
+}
+
+.header
+{
+	color: #fff;
+	background: #999;
+	padding: 1em 1.25em;
+}
+
+.header-heading { margin: 0; }
+
+.nav-bar
+{
+	background: #000;
+	padding: 0;
+}
+
+.content
+{
+	padding: 1em 1.25em;
+	background-color: #fff;
+}
+
+.footer
+{
+	color: #fff;
+	background: #000;
+	padding: 1em 1.25em;
+}
+
+/* -----------------------
+Nav
+------------------------*/
+
+.nav
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.nav li
+{
+	display: inline;
+	margin: 0;
+}
+
+.nav a
+{
+	display: block;
+	padding: .7em 1.25em;
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px solid gray;
+}
+
+.nav a:link { color: white; }
+.nav a:visited { color: white; }
+
+.nav a:focus
+{
+	color: black;
+	background-color: white;
+}
+
+.nav a:hover
+{
+	color: white;
+	background-color: green;
+}
+
+.nav a:active
+{
+	color: white;
+	background-color: red;
+}
+
+/* -----------------------
+Single styles
+------------------------*/
+
+.img-responsive { max-width: 100%; }
+
+.btn
+{
+	color: #fff !important;
+	background-color: royalblue;
+	border-color: #222;
+	display: inline-block;
+	padding: .5em 1em;
+	margin-bottom: 0;
+	font-weight: 400;
+	line-height: 1.2;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: .2em;
+	text-decoration: none;
+}
+
+.btn:hover
+{
+	color: #fff !important;
+	background-color: green;
+}
+
+.btn:focus
+{
+	color: #fff !important;
+	background-color: black;
+}
+
+.btn:active
+{
+	color: #fff !important;
+	background-color: red;
+}
+
+.table
+{
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+
+.list-unstyled
+{
+	padding-left: 0;
+	list-style: none;
+}
+
+.list-inline
+{
+	padding-left: 0;
+	margin-left: -5px;
+	list-style: none;
+}
+
+.list-inline > li
+{
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+/* -----------------------
+Wide styles
+------------------------*/
+
+@media (min-width: 42em)
+{
+	.header { padding: 1.5em 3em; }
+	.nav-bar { padding: 1em 3em; }
+	.content { padding: 2em 3em; }
+	.footer { padding: 2em 3em; }
+
+	.nav li
+	{
+		display: inline;
+		margin: 0 1em 0 0;
+	}
+
+	.nav a
+	{
+		display: inline;
+		padding: 0;
+		border-bottom: 0;
+	}
+}
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <link rel="canonical" href=".">
+    <title>Retrowax - Zombusters</title>
+    <script type="application/ld+json">
+        {
+            "@context": "http://zombusters.com",
+            "@type": "Webpage",
+            "url": "https://www.zombusters.com",
+            "name": "Zombusters video game",
+            "headline": "Zombusters - action pixel art video game",
+            "description": "A fun and old-school action video game with zombies and different power-ups and enemies",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://www.zombusters.com"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Retrowax Games",
+                "logo": {
+                    "url": "https://www.retrowax.com/retrowax-logo.svg",
+                    "width": 175,
+                    "height": 60,
+                    "@type": "ImageObject"
+                }
+            },
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://www.zombusters.com/leader.png",
+                "width": 1200,
+                "height": 630
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="navbar-top" class="nav-bar">
+        <div class="container">
+            <ul class="nav">
+                <li><a href="http://www.retrowax.com" target="_blank">Retrowax</a></li>
+                <li><a href="https://retrowax.itch.io/zombusters/devlog" target="_blank">Development Blog</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <amp-img src="images/zombusters-header.jpg"
+             width="960"
+             height="250"
+             layout="responsive"
+             alt="This is a hero image which should be loaded as fast as possible">
+    </amp-img>
+
+    <div class="content">
+        <div class="container">
+            <div class="main">
+                <div id="">
+                    <b>TRY THE BETA NOW ON ITCH.IO</b><br/><br/>
+
+                    <iframe frameborder="0" src="https://itch.io/embed/193462?linkback=true&amp;bg_color=e9e7e7&amp;fg_color=222222&amp;link_color=bd930f&amp;border_color=333333" width="552" height="167"><a href="https://retrowax.itch.io/zombusters">Zombusters: Enhanced Edition by Retrowax</a></iframe>
+                    <br/><br/><br/><br/>
+                </div>
+
+                <p>
+                    <iframe width="720" height="460" src="https://www.youtube-nocookie.com/embed/mYXBIZX9VgQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </p>
+
+                <div id="game-description">
+                    <p>
+                        There is something strange in the neighbourhood. There are a lot of Zombies in our city, the zombie invasion is here! We need to stop them!
+                        <br/>
+                        <br/>
+                        <b>WHO YOU GONNA CALL?</b>
+                        <br/><br/>
+                        It will let you sticked on your seat until the end. Its 2D graphics and isometric view make it a different specie in its genre. You will have to face a horde of Zombies that try to get you down with the help of various weapons/power ups and different moving styles.
+                        <br/><br/>
+                        <b>Features</b>
+                        <br/>
+                        <ul>
+                            <li>Cool Weapons and Power-Ups</li>
+                            <li>Leaderboards</li>
+                            <li>Cool Indie Original Soundtrack (12 Tracks)</li>
+                            <li>10 Different Maps</li>
+                            <li>4 Playable Characters</li>
+                            <li>Input: Keyboard&Mouse and Gamepad (Xbox360)</li>
+                            <li>Cool Pixel Art graphics</li>
+                        </ul>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            &copy; Copyright 2011 - 2020 Retrowax Games
+        </div>
+    </div>
+
+    <amp-analytics type="gtag" data-credentials="include">
+        <script type="application/json">
+            {
+                "vars" : {
+                    "gtag_id": "UA-1125526-14",
+                    "config" : {
+                        "UA-1125526-14": {
+                            "groups": "default"
+                        }
+                    }
+                }
+            }
+        </script>
+    </amp-analytics>
+</body>
+</html>
